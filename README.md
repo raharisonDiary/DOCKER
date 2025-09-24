@@ -59,3 +59,23 @@ docker run -d --name web1 --network mon-reseau nginx
 
 docker exec -it web1 ping redis1
 # Tester la connectivité entre containers
+
+      JOUR3 Docker Compose et Backup
+
+docker-compose up -d
+# Lancer les services définis dans docker-compose.yml
+
+docker-compose down
+# Arrêter et supprimer les services
+
+docker-compose logs
+# Voir les logs de tous les services
+
+docker exec mysql1 mysqldump -u root -ppass appdb > backup.sql
+# Sauvegarder une base de données MySQL
+
+docker exec -i mysql1 mysql -u root -ppass appdb < backup.sql
+# Restaurer une base MySQL à partir d’un fichier
+
+docker system prune -a --volumes
+# Nettoyer tous les containers, images, réseaux et volumes inutilisés
