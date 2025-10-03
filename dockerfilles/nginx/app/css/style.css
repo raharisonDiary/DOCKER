@@ -1,34 +1,77 @@
+/* Reset tsotra */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container {
-  background-color: #fff;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.login-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 350px;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+.login-container h1 {
+    color: #1877f2;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
 }
-li:last-child {
-  border-bottom: none;
+
+.login-container button:hover {
+    background-color: #165ecb;
+}
+
+.login-container .forgot {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.login-container .forgot a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.login-container .forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #555;
 }
